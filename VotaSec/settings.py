@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'votapp.apps.VotappConfig',
     'bootstrap3',
     'cloudinary',
+=======
+    'votapp',
+>>>>>>> dc72b8ea25e90a873c1aec753071f9c98e303f26
 ]
 
 MIDDLEWARE = [
@@ -78,11 +82,11 @@ WSGI_APPLICATION = 'VotaSec.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'vota',
-        'USER': 'angela',
-        'PASSWORD':'Angie168',
-        'HOST': 'localhost', 
+        'USER': 'postgre',
+        'PASSWORD':'chebichii1',
+        'HOST' : 'localhost'
     }
 }
 
@@ -129,3 +133,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'votapp.User'
