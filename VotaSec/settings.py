@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+cloudinary.config(
+  cloud_name = "natty-pics",
+  api_key = "124635669382139",
+  api_secret = "4xqHBYqKLwLtaKZUL_DV2ON-pxs",
+  secure = True
+)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,13 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'votapp.apps.VotappConfig',
     'bootstrap3',
     'cloudinary',
-=======
-    'votapp',
->>>>>>> dc72b8ea25e90a873c1aec753071f9c98e303f26
 ]
 
 MIDDLEWARE = [
@@ -84,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'vota',
-        'USER': 'postgre',
+        'USER': 'postgres',
         'PASSWORD':'chebichii1',
         'HOST' : 'localhost'
     }

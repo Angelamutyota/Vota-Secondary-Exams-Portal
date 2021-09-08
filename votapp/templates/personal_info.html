@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<style>
+    #profile {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+</style>
+<!-- <style>
+    #background2{
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style> -->
+
+<body>
+
+    <div class="container">
+        <div class="col-sm-6 m-auto ">
+            <div class=" content-section container" style="padding-top: 100px;">
+                <div class="media">
+                    <div class="col-sm-4">
+                        <div id="profile" class="rounded-circle">
+                            <img style="width: 120%; height: 120%;" src="{{user.personalinfo.picture.url }}" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="media-body">
+                        <h2 style="font-family: 'Special Elite', cursive; color: black; font-size: 40px;">
+                            {{user.username}}</h2>
+                        <p style="font-family: 'Special Elite', cursive; color: black; font-size: 30px;">{{user.personalinfo.admno}}
+                        </p>
+                        <p style="font-family: 'Special Elite', cursive; font-size: 25px; color: black;">{{user.personalinfo.gender}}</p>
+                        <p style="font-family: 'Special Elite', cursive; font-size: 25px;">{{user.personalinfo.parent_contact}}</p>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+{%endblock content%}

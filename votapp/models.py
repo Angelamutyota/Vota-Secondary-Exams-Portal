@@ -1,6 +1,6 @@
-
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -123,3 +123,19 @@ class StudentExtra(models.Model):
         return self.user.first_name
 
 
+class Personalinfo(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, default='0')
+    picture = CloudinaryField('image')
+    gender = models.TextField(max_length=10)
+    admno = models.IntegerField(null=True, blank=True)
+    parent_contact = models.CharField(max_length=40,null=True)
+
+    def __str__(self):
+        return self.user.username
+
+
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete()
