@@ -27,18 +27,18 @@
             <div class=" content-section container" style="padding-top: 100px;">
                 <div class="media">
                     <div class="col-sm-4">
-                        <div id="profile" class="rounded-circle">
-                            <img style="width: 120%; height: 120%;" src="{{user.personalinfo.picture.url }}" alt="">
+                        <div id="profile" class="rounded mx-auto d-block">
+                            <img style="width: 200px; height: 180px;" src="{{user.personalinfo.picture.url }}" alt="">
                         </div>
                     </div>
                     <hr>
-                    <div class="media-body">
+                    <div class="media-body" style="margin-left: 100px;">
                         <h2 style="font-family: 'Special Elite', cursive; color: black; font-size: 40px;">
                             {{user.username}}</h2>
-                        <p style="font-family: 'Special Elite', cursive; color: black; font-size: 30px;">{{user.personalinfo.admno}}
+                        <p style="font-family: 'Special Elite', cursive; color: black; font-size: 25px;">ADMISSION NUMBER: {{user.personalinfo.admno}}
                         </p>
-                        <p style="font-family: 'Special Elite', cursive; font-size: 25px; color: black;">{{user.personalinfo.gender}}</p>
-                        <p style="font-family: 'Special Elite', cursive; font-size: 25px;">{{user.personalinfo.parent_contact}}</p>
+                        <p style="font-family: 'Special Elite', cursive; font-size: 25px; color: black;">GENDER: {{user.personalinfo.gender}}</p>
+                        <p style="font-family: 'Special Elite', cursive; font-size: 25px;">PARENTS CONTACT: {{user.personalinfo.parent_contact}}</p>
                         <hr>
 
                     </div>
