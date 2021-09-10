@@ -20,27 +20,11 @@ def personal_info(request):
         profile_form = PersonalinfoForm(instance=request.user)
     return render(request, 'personal_info.html',{ "profile_form": profile_form})
 
-@login_required(login_url='/accounts/login/')
-def class_list(request):
-    all_classes = classes.objects.all()
-    search_term = ''
-    if 'name' in request.GET:
-        all_classes = all_classes.order_by('description')
-
-    if 'date' in request.GET:
-        all_classes = all_classes.order_by('pub_date')
+def tdash(request):
+    return render(request, 'tdash.html')
 
 
-    if 'search' in request.GET:
-        search_term = request.GET['search']
-        all_classes = all_classes.filter(text__icontains=search_term)
 
-    paginator = Paginator(all_polls, 6)
-    page = request.GET.get('page')
-    polls = paginator.get_page(page)
-    get_dict_copy = request.GET.copy()
-    context = {
-        'polls': polls,
-        'search_term': search_term,
-    }
-    return render(request, 'poll_list.html', context)
+def index(request):
+    return render(request, 'tdash.html')
+

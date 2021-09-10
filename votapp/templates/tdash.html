@@ -32,10 +32,10 @@
                 </a>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b
                         class="fa fa-angle-down"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Personal Information</a></li>
                     <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
                     <li class="divider"></li>
                     <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
@@ -65,7 +65,7 @@
 
             <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a href="/" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> Home<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> Home<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="collapse">
                         <li><a href="{% url 'personalinfo' %}"><i class="fa fa-angle-double-right"></i> Personal Information</a></li>
                     </ul>
@@ -105,25 +105,76 @@
         </div>
     </nav>
 
-    <div class="media">
-        <div class="col-sm-4">
-            <div id="profile" class="rounded mx-auto d-block">
-                <img style="width: 200px; height: 180px;" src="{{user.personalinfo.picture.url }}" alt="">
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row" id="main">
+                <div class="col-sm-12 col-md-12 well" id="content">
+                    <h2>Welcome {{user.personalinfo.admno}}!</h2>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="media-body" style="margin-left: 100px;">
-            <h2 style="font-family: 'Special Elite', cursive; color: black; font-size: 40px;">
-                {{user.username}}</h2>
-            <p style="font-family: 'Special Elite', cursive; color: black; font-size: 25px;">ADMISSION NUMBER: {{user.personalinfo.admno}}
-            </p>
-            <p style="font-family: 'Special Elite', cursive; font-size: 25px; color: black;">GENDER: {{user.personalinfo.gender}}</p>
-            <p style="font-family: 'Special Elite', cursive; font-size: 25px;">PARENTS CONTACT: {{user.personalinfo.parent_contact}}</p>
-            <hr>
-            <a href="/">
-                <button class="btn btn-primary btn-md">Back Home</button>
-              </a>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <h1>Vota Secondary School</h1>
+                    <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid</p>
 
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a href="/" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i> Lorem Lorem</a>
+                    <a href="/" class="btn btn-outline-secondary" target="_blank">
+                        <i class="fa fa-download"></i> Download Report</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <h2>Pro Sidebar</h2>
+            <hr>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <p>Lorem ipsum sdsd lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam</p>
+                    <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip <a href="https://github.com/azouaoui-med/pro-sidebar-template"
+                            target="_blank">
+                            Github</a> Loremm ipsum</p>
+                </div>
+                <!-- <div class="form-group col-md-12">
+                <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=small" frameborder="0" scrolling="0" width="90px" height="30px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="90px" height="30px"></iframe>
+              </div> -->
+                <div class="form-group col-md-12">
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">New !</h4>
+                        <p>Try out card and buttons <a href="/" target="_blank">See!!</a> <a href="/" target="_blank">
+                            </a></p>
+                        <a href="/" target="_blank" class="btn btn-sm btn-primary mr-2">
+                            Card</a>
+                        <a href="/" target="_blank" class="btn btn-sm btn-success">
+                            Demo</a>
+
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer class="text-center">
+                <div class="mb-2">
+                    <small>
+                        © 2020 made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank"
+                            rel="noopener noreferrer">
+                            Data Pirates
+                        </a>
+                    </small>
+                </div>
+            </footer>
         </div>
     </div>
     {% endblock %}
