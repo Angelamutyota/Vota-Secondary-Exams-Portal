@@ -48,10 +48,10 @@ def login_request(request):
                 login(request, user)
                 if request.user.is_authenticated and request.user.is_teacher:
                     teachers = "<h2>vota teachers </h2>"
-                    return HttpResponse(teachers)
+                    return render(request,'index.html')
                 else:
                     students="<h2>Vota students </h2>"
-                    return HttpResponse(students)
+                return render(request,'index.html')
             else:
                 messages.error(request, "Invalid username or password")
         else:
