@@ -4,3 +4,9 @@ from django.http  import HttpResponse
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+
+def timetable(request):
+    if request.method == "POST":
+      day = request.POST.get('day', "")
+      
+    return render(request, 'timetable.html')

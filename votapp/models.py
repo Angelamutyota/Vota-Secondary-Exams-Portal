@@ -122,4 +122,24 @@ class StudentExtra(models.Model):
     def __str__(self):
         return self.user.first_name
 
+days = [('monday', 'monday'),
+           ('Tuesday', 'Tuesday'),
+           ('Wednesday', 'Wednesday'),
+           ('Thursday', 'Thursday'),
+           ('Friday', 'Friday'),
+           ('Saturday', 'Saturday'),
+           ('Sunday', 'Sunday')]
+
+class Timetable(models.Model):
+    date = models.DateField()
+    day = models.CharField(max_length=100, choices=days)
+    subject=models.CharField(max_length=1000,choices=lessons, default='none')
+    start = models.TimeField()
+    finish = models.TimeField()
+    stream = models.CharField(max_length=100, choices=classes, default='none')
+    teacher = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.day
+
 
