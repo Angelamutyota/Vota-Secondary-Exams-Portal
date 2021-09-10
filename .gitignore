@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+virtual/
+=======
+>>>>>>> dc72b8ea25e90a873c1aec753071f9c98e303f26
 
 # Created by https://www.toptal.com/developers/gitignore/api/django
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
@@ -125,7 +129,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-virtual
 
 # Spyder project settings
 .spyderproject
@@ -152,3 +155,4 @@ dmypy.json
 cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
+

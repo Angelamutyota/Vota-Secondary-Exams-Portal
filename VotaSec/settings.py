@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+cloudinary.config(
+  cloud_name = "natty-pics",
+  api_key = "124635669382139",
+  api_secret = "4xqHBYqKLwLtaKZUL_DV2ON-pxs",
+  secure = True
+)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,6 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'votapp.apps.VotappConfig',
+    'bootstrap3',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +89,11 @@ WSGI_APPLICATION = 'VotaSec.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vota',
+        'USER': 'postgres',
+        'PASSWORD':'Access',
+        'HOST' : 'localhost'
     }
 }
 
@@ -123,3 +140,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'votapp.User'
