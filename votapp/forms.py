@@ -23,8 +23,8 @@ class TeacherRegistrationForm(UserCreationForm):
         user = super().save(commit=False)
         user.is_teacher = True
         user.save()
-        # teacher = teacher_register.objects.create(user=user)
-        # teacher.save()
+        teacher = teacher.objects.create(user=user)
+        teacher.save()
         return user
 
 class StudentRegistrationForm(UserCreationForm):
