@@ -4,10 +4,8 @@ from django.shortcuts import render
 def tdash(request):
     return render(request, 'tdash.html')
 
-
-
 def index(request):
-    return render(request, 'tdash.html')
+    return render(request, 'dash.html')
 
 def exam1 (request):
       return render(request, 'exam1.html')
