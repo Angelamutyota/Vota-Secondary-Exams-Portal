@@ -1,6 +1,10 @@
 asgiref==3.4.1
+<<<<<<< HEAD
 autopep8==1.5.7
 certifi==2020.11.8
+=======
+certifi==2021.5.30
+>>>>>>> 5aee73c137034320bc09d6f0bdd7f229c788f72f
 cloudinary==1.26.0
 config==0.5.0.post0
 confusable-homoglyphs==3.2.0
